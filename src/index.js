@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Radium from 'radium'
 import './index.css';
 import ReactDOM from 'react-dom'
 import Box from './comp/box.js';
@@ -10,16 +11,27 @@ class Times extends React.Component {
     }
 
     render() {
+        const styles = {
+            base: {
+                backgroundColor: 'black',
+                color: 'yellow',
+                ":hover": {
+                    backgroundColor: "green",
+                    color: "red"
+                }
+            }
+      
+        }
+
         let data = null
         data = (
-            <div className='matrix'>
+            <div className='inner-matrix' >
                 {
                     this.state.number.map(item => {
-
-                        if (item == 8 || item == 15 || item == 22 || item == 29) {
-                            return <React.Fragment> <br /><Box number={item} /></React.Fragment>
+                        if (item === 8 || item === 15 || item === 22 || item === 29) {
+                            return <React.Fragment> <br /><Box number={item} style={styles.base}/></React.Fragment>
                         } else {
-                            return <Box number={item} />
+                            return <Box number={item} style={styles.base}/>
                         }
                     })
                 }
@@ -27,7 +39,7 @@ class Times extends React.Component {
         )
 
         return (
-            <div className='matrix'>
+            <div className='matrix' >
                 <h1 className='title'> Log your dates</h1>
                 {data}
             </div>
@@ -35,9 +47,8 @@ class Times extends React.Component {
     }
 }
 
-//export default Times;
-
 ReactDOM.render(
     <Times />,
     document.getElementById('root')
 );
+export default Radium(Times);

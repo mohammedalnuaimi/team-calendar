@@ -1,10 +1,11 @@
 import React from 'react'
+import Radium from 'radium'
 const Box = (props) => {
         return (
-            <button className="box" onClick={function () { alert('YOU CLICKED ME!'); }}>
+            <button className="box" style={props.style}>
             {props.number}
             </button>
         );
 }
 
-export default Box;
+export default Radium(Box);

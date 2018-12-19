@@ -19,10 +19,19 @@ body {
   }
   
   .matrix {
+    background: #1d2658 ;
+    text-align: center;
+    color: #ffffdd;
+    height: 500px;
+    border: 5px solid rgb(234, 241, 235);
+  } 
+
+  .inner-matrix {
     background: #8e9cac ;
     text-align: center;
     height: 500px;
-    border: 5px solid rgb(234, 241, 235);
+    border: 5px solid rgb(29, 102, 109);
+    padding-top: 1cm
   }
 
   .title {
