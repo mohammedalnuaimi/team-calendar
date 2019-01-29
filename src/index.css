@@ -18,6 +18,21 @@ body {
     width: 60px;
   }
   
+  .selected {
+    background: #00e4be;
+    border: 1px solid #999;
+    float:center;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 50px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 60px;
+  }
+
   .matrix {
     background: #1d2658 ;
     text-align: center;
